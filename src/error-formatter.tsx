@@ -10,11 +10,11 @@ const formatters: Formatter = {
     },
     'minLength': (error: ajv.ErrorObject) => {
         const params: LimitParams = error.params as LimitParams;
-        return `Field must not exceed ${params.limit} characters`
+        return `Field must be at least ${params.limit} characters`
     },
     'maxLength': (error: ajv.ErrorObject) => {
         const params: LimitParams = error.params as LimitParams;
-        return `Field must bet at least ${params.limit} characters`
+        return `Field must not exceed ${params.limit} characters`
     },
     'pattern': (error: ajv.ErrorObject) => {
         const params: PatternParams = error.params as PatternParams;
