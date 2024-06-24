@@ -1,0 +1,51 @@
+{
+    "$id": "https://example.com/person.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "Error Messages",
+    "description": "Error Messages Test",
+    "required": [
+        "requiredField"
+    ],
+    "properties": {
+        "requiredField": {
+            "type": "string",
+            "title": "Required Field"
+        },
+        "minLength": {
+            "type": "string",
+            "title": "Min Length",
+            "minLength": 5
+        },
+        "maxLength": {
+            "type": "string",
+            "title": "Max Length",
+            "maxLength": 5
+        },
+        "pattern": {
+            "type": "string",
+            "title": "Pattern",
+            "pattern": "\\d[a-z]{3}\\.[A-Z]{3}"
+        },
+        "min1": {
+            "title": "Minumum 1",
+            "type": "number",
+            "minimum": 1
+        },
+        "max10": {
+            "title": "Maximum 10",
+            "type": "number",
+            "maximum": 10
+        },
+        "exclusiveMin1": {
+            "title": "Exclusive Minumum 1",
+            "type": "number",
+            "exclusiveMinimum": 1
+        },
+        "exclusiveMax10": {
+            "title": "Exclusive Maximum 10",
+            "type": "number",
+            "exclusiveMaximum": 10
+        }
+    }
+}
